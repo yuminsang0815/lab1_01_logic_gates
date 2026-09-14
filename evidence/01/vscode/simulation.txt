@@ -1,0 +1,16 @@
+ *  Executing task in folder PROJECT: C:\Users\a2391\AppData\Local\Microsoft\WindowsApps\python.EXE tools/lab1.py simulate 
+
+RUN C:\iverilog\bin\iverilog.EXE -g2012 -Wall -I C:\Users\a2391\lab1_01_logic_gates\src -I C:\Users\a2391\lab1_01_logic_gates\sim -s tb_logic_gate_modern -o C:\Users\a2391\lab1_01_logic_gates\build\sim\run-c506090a711b44f6b52ec02bfd64ae97\sim.vvp C:\Users\a2391\lab1_01_logic_gates\src\logic_gate.v C:\Users\a2391\lab1_01_logic_gates\sim\tb_logic_gate_modern.sv
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module logic_gate declared here: C:\Users\a2391\lab1_01_logic_gates\src\logic_gate.v:1
+
+RUN C:\iverilog\bin\vvp.EXE -N C:\Users\a2391\lab1_01_logic_gates\build\sim\run-c506090a711b44f6b52ec02bfd64ae97\sim.vvp
+VCD info: dumpfile wave.vcd opened for output.
+LAB1_PASS logic_gate cases=4
+C:\Users\a2391\lab1_01_logic_gates\sim\tb_logic_gate_modern.sv:19: $finish called at 40000 (1ps)
+
+시뮬레이션 실행 완료. 진리표·자기검사·파형으로 회로의정답 여부를 확인하세요.
+WAVE C:\Users\a2391\lab1_01_logic_gates\build\sim\wave.vcd
+ *  Terminal will be reused by tasks, press any key to close it. 
