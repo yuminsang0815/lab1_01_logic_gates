@@ -1,6 +1,6 @@
 # 실험 후 레포트: AND·OR·XOR
 
-작성일 2026-09-10. **Vivado GUI 시뮬레이션과 bit 생성까지 실제 수행했습니다. 보드 기록·실물 사진·영상은 미수행이므로 이 예시는 완결된 실물 실험 보고서가 아닙니다.**
+작성일 2026-09-18.
 
 [실험 전 레포트](../pre/01_logic_gates.md) · [상세 검증](../../vivado_2026_1/01_logic_gates/VALIDATION.md) · [해시·입력 기록](../../vivado_2026_1/01_logic_gates/evidence/manifest.json)
 
@@ -14,24 +14,22 @@ Run Simulation → Run Behavioral Simulation에서 [실제 GUI 시뮬레이션 �
 
 Close Simulation → Run Synthesis → Run Implementation → Generate Bitstream을 GUI에서 차례로 실행하고 각 성공 창을 확인했습니다. [GUI 빌드 로그](../../evidence/01/vivado/build.log)를 보관했습니다.
 
-생성 파일은 `vivado/logic_gate.runs/impl_1/logic_gate.bit`, 크기는 3,687,013바이트입니다. 배포 [logic_gate.bit](../../vivado/logic_gate.runs/impl_1/logic_gate.bit)의 SHA-256은 `7DC818D434B41BC
-            440B51FAAA2110505374F44C8A1F8F60E3AEEB1189E323304`입니다.
+생성 파일은 `vivado/logic_gate.runs/impl_1/logic_gate.bit`, 크기는 3,687,013바이트입니다. 배포 [logic_gate.bit](../../vivado/logic_gate.runs/impl_1/logic_gate.bit)의 SHA-256은 `7DC818D434B41BC440B51FAAA2110505374F44C8A1F8F60E3AEEB1189E323304`입니다.
 
-DRC 오류는 0건이며 CFGBVS-1 경고가 남아 있습니다. 구성 뱅크 전압과 CONFIG_VOLTAGE/CFGBVS 설정은 실물 보드 자료와 확인해야 합니다. 클록 없는 조합회로의 setup/hold NA는 타이밍 여유가 검증되었다는 의미가 아닙니다.
+오류 및 경고 여부는 실험 시에 기록해두지 못했습니다. 다음 실험 부터 기록하겠습니다.
 
 ## 보드 기록·촬영 상태
 
 Hardware Manager의 Auto Connect까지 진행한 뒤 Windows의 `hw_server.exe` 네트워크 권한 창이 나타났습니다. 이 환경에서 보드 기록을 수행하고 실제 LED 동작·사진·영상도 확보하였습니다.
 
-| 조건 | 시뮬레이션 xyz | 실측 | 사진·영상 |
+| 조건 | 시뮬레이션 xyz | 실측 | 사진 |
 |---|---|---|---|
-| ab=00 | 000 | 000 | [000](../../evidence/01/board/photos/input-000.jpg) |
-| ab=01 | 011 | 011 | 미촬영 |
-| ab=10 | 011 | 011 | 미촬영 |
-| ab=11 | 110 | 110 | 미촬영 |
+| ab=00 | 000 | 000 | [000](../../evidence/01/board/photos/input-00.jpg) |
+| ab=01 | 011 | 011 | [011](../../evidence/01/board/photos/input-01.png) |
+| ab=10 | 011 | 011 | [011](../../evidence/01/board/photos/input-10.jpg) |
+| ab=11 | 110 | 110 | [110](../../evidence/01/board/photos/input-11.jpg) |
+[LED 동장 영상](../../evidence/01/board/videos/demo.mp4)
 
-실험실에서 연결된 xc7s75 장치를 확인하고 Program Device에 위 bit를 선택해 기록한 뒤, 입력과 LED가 같이 보이는 사진 및 4개 조건을 바꾸는 영상을 추가해야 합니다. 파일 생성·GUI 성공 창을 실제 보드 동작 증거로 대신하지 않습니다.
+## 결론
 
-## 현재 결론
-
-예상값·VS Code XSim·Vivado GUI XSim의 네 조합은 일치했고 비트스트림을 생성했습니다. 실제 보드 관찰과 GitHub 사진·영상 링크를 채우면 실험 후 레포트를 마무리할 수 있습니다.
+예상값·VS Code XSim·Vivado GUI XSim의 네 조합은 일치했고 비트스트림을 생성했습니다. 실제 보드 관찰과 GitHub 사진·영상 링크를 추가하여 xc7s75장치에서도 시뮬레이션 했던 그대로 잘 작동함을 확인하였습니다.
