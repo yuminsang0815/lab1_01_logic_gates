@@ -2,7 +2,7 @@
 
 작성일 2026-09-18.
 
-[실험 전 레포트](../pre/01_logic_gates.md) · [상세 검증](../../vivado_2026_1/01_logic_gates/VALIDATION.md) · [해시·입력 기록](../../vivado_2026_1/01_logic_gates/evidence/manifest.json)
+[실험 전 레포트](../pre/01_logic_gates.md) · [상세 검증](../../vivado_2026_1/01_logic_gates/VALIDATION.md) · [해시·입력 기록](../../build/sim/result.json)
 
 ## Vivado GUI 과정과 사전 결과 비교
 
